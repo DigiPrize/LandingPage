@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigiPrize – Beli Produk & Dapat Hadiah</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Poppins,sans-serif;
+background:#0b0b0b;
+color:#fff;
+line-height:1.6
+}
+.container{max-width:900px;margin:auto;padding:20px}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#111,#1b1b1b);
+padding:50px 20px;
+border-radius:18px;
+text-align:center;
+margin-bottom:40px
+}
+.hero h1{font-size:2.05rem;margin-bottom:12px}
+.hero p{opacity:.9;margin-bottom:18px}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:14px 34px;
+border-radius:50px;
+background:#00ff88;
+color:#000;
+font-weight:700;
+text-decoration:none
+}
+
+/* SLOT */
+.slot{
+background:#141414;
+border-radius:14px;
+padding:20px;
+text-align:center;
+margin:30px 0;
+border:1px solid #222
+}
+.slot strong{color:#00ff88;font-size:1.5rem}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px
+}
+.card{
+background:#141414;
+padding:20px;
+border-radius:14px;
+border:1px solid #222
+}
+.card h3{margin-bottom:8px}
+
+/* STICKY */
+.sticky{
+position:fixed;
+bottom:0;left:0;right:0;
+display:flex;
+z-index:999
+}
+.sticky a{
+flex:1;
+padding:14px;
+text-align:center;
+font-weight:700;
+text-decoration:none
+}
+.order{background:#00ff88;color:#000}
+.wa{background:#111;color:#00ff88}
+
+/* FOOTER */
+footer{
+padding:80px 20px 110px;
+text-align:center;
+opacity:.6;
+font-size:.85rem
+}
+
+/* POPUP */
+#popupBatch{
+position:fixed;
+top:0;left:0;right:0;bottom:0;
+background:rgba(0,0,0,.75);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999
+}
+#popupBatch .box{
+background:#111;
+padding:30px;
+border-radius:18px;
+max-width:360px;
+text-align:center;
+border:1px solid #222
+}
+
+/* FAKE NOTIF */
+#notif{
+position:fixed;
+bottom:90px;
+left:20px;
+background:#111;
+border:1px solid #222;
+border-radius:12px;
+padding:12px 16px;
+font-size:.85rem;
+display:none;
+z-index:9998
+}
+#notif span{color:#00ff88;font-weight:600}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+<h1>BELI PRODUK DIGITAL & DAPAT PELUANG HADIAH 🎁</h1>
+<p>
+🎁 Hadiah Pilihan:<br>
+✔️ <b>Smartphone Samsung</b><br>
+✔️ <b>Diamond Mobile Legends</b><br>
+✔️ <b>Hadiah menarik lainnya</b>
+</p>
+
+<p style="font-size:.9rem;opacity:.8">
+📦 Batch Aktif: <b>Batch #1</b><br>
+⏳ Batch akan ditutup jika slot kupon habis
+</p>
+
+<a href="https://lynk.id" class="btn">AMBIL SLOT SEKARANG</a>
+</section>
+
+<!-- SLOT -->
+<section class="slot">
+<p>⏳ SLOT KUPON TERSISA</p>
+<strong id="slot">37</strong> / 200
+<p style="margin-top:8px;font-size:.85rem">Update otomatis</p>
+</section>
+
+<!-- BENEFIT -->
+<section class="grid">
+<div class="card">
+<h3>⚡ Beli Sekali</h3>
+<p>Langsung dapat 1 kupon undian.</p>
+</div>
+<div class="card">
+<h3>🎁 Hadiah Nyata</h3>
+<p>Smartphone Samsung / Diamond ML.</p>
+</div>
+<div class="card">
+<h3>💰 Bonus Referral</h3>
+<p>Cashback & bonus jika referral menang.</p>
+</div>
+</section>
+
+<!-- REFERRAL -->
+<section class="slot">
+<p>
+✔️ Referral pakai kode kamu → <b>Rp2.000 / orang</b><br>
+✔️ Referral menang hadiah → <b>bonus Rp100.000</b>
+</p>
+</section>
+
+<!-- KATEGORI PRODUK -->
+<section class="slot">
+<p style="font-weight:600;margin-bottom:14px">
+📂 PRODUK DIGITAL DIGIPRIZE 📂
+</p>
+
+<div class="grid">
+<div class="card">💰 <b>Ebook & Ecourse Cuanable</b></div>
+<div class="card">🚀 <b>Video Viral Factory</b></div>
+<div class="card">🤖 <b>AI & Auto Money Tools</b></div>
+<div class="card">📊 <b>Trading & Profit Lab</b></div>
+<div class="card">🎨 <b>Creator & Design Hub</b></div>
+<div class="card">🎬 <b>Entertainment Vault</b></div>
+</div>
+
+<p style="margin-top:14px;font-size:.85rem;opacity:.8">
+Semua produk tetap mendapatkan kupon undian & cashback referral.
+</p>
+</section>
+
+<!-- CTA -->
+<section class="hero">
+<h2>Batch Hampir Ditutup.</h2>
+<p>Jika ditutup, harus menunggu batch berikutnya.</p>
+<a href="https://lynk.id" class="btn">GAS SEKARANG</a>
+</section>
+
+</div>
+
+<!-- STICKY -->
+<div class="sticky">
+<a href="https://lynk.id" class="order">ORDER SEKARANG</a>
+<a href="https://wa.me/6283142225207?text=Halo%20saya%20ingin%20ambil%20slot%20DigiPrize" class="wa">CHAT ADMIN</a>
+</div>
+
+<footer>© 2025 DigiPrize</footer>
+
+<!-- POPUP BATCH -->
+<div id="popupBatch">
+  <div class="box">
+    <h3 style="color:#00ff88;margin-bottom:10px">⚠️ BATCH HAMPIR DITUTUP</h3>
+    <p style="margin-bottom:20px">
+      Slot kupon semakin sedikit.<br>
+      Batch akan segera ditutup.
+    </p>
+    <a href="https://lynk.id" class="btn" style="display:block;margin-bottom:10px">
+      AMBIL SLOT SEKARANG
+    </a>
+    <button onclick="closeBatch()" style="background:none;border:none;color:#aaa;font-size:.8rem">
+      Nanti dulu
+    </button>
+  </div>
+</div>
+
+<!-- FAKE NOTIF -->
+<div id="notif">
+<span id="notifName">Andi</span> – <span id="notifPhone">0812*****092</span><br>
+baru saja ambil slot 🎉
+</div>
+
+<script>
+let slot = 37;
+const interval = 18000;
+
+setInterval(() => {
+  if(slot > 3){
+    slot--;
+    document.getElementById("slot").innerText = slot;
+    showNotif();
+  }
+}, interval);
+
+setTimeout(() => {
+  document.getElementById("popupBatch").style.display = "flex";
+}, 10000);
+
+function closeBatch(){
+  document.getElementById("popupBatch").style.display = "none";
+}
+
+const names = ["Andi","Rizky","Dewi","Budi","Ayu","Fajar","Rina","Agus","Putra"];
+function randomPhone(){
+  const start = ["0812","0813","0852","0877","0896"];
+  const end = Math.floor(100 + Math.random()*900);
+  return start[Math.floor(Math.random()*start.length)]+"*****"+end;
+}
+
+function showNotif(){
+  document.getElementById("notifName").innerText =
+    names[Math.floor(Math.random()*names.length)];
+  document.getElementById("notifPhone").innerText = randomPhone();
+  const notif = document.getElementById("notif");
+  notif.style.display = "block";
+  setTimeout(()=>{notif.style.display="none"},4000);
+}
+</script>
+
+</body>
+</html>
